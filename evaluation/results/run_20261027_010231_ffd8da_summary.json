@@ -1,0 +1,65 @@
+{
+  "run_id": "run_20261027_010231_ffd8da",
+  "timestamp": "2026-10-26T18:02:34Z",
+  "model_id": "mock-vlm-2b",
+  "sample_count": 50,
+  "performance": {
+    "attempted_requests": 50,
+    "completed_requests": 0,
+    "failed_requests": 50,
+    "error_rate_pct": 100.0,
+    "total_elapsed_seconds": 0.006,
+    "request_throughput_rps": 0.0,
+    "output_token_throughput_tps": 0.0,
+    "latency_e2e_ms": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "latency_inference_ms": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "latency_preprocessing_ms": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "p95": 0.0,
+      "p99": 0.0
+    },
+    "peak_vram_allocated_bytes": null,
+    "peak_vram_reserved_bytes": null
+  },
+  "quality": {
+    "invoice": {
+      "count": 0,
+      "mean_f1": 0.0,
+      "json_validity_rate_pct": 0.0
+    },
+    "ocr": {
+      "count": 0,
+      "mean_cer": 0.0,
+      "mean_wer": 0.0,
+      "exact_match_pct": 0.0
+    },
+    "vqa": {
+      "count": 0,
+      "mean_anls": 0.0,
+      "exact_match_pct": 0.0
+    }
+  },
+  "error_taxonomy": {
+    "SCHEMA_FORMAT_ERROR": 50
+  }
+}

@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  gateway:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.gateway
+    container_name: vlm-gateway-prod
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - VLM_WORKER_AUTH_TOKEN=${VLM_WORKER_AUTH_TOKEN:-vlm_worker_secret_2026}
+      - VLM_CLIENT_API_KEY=${VLM_CLIENT_API_KEY:-}
+      - VLM_ENABLE_CACHE=true
+      - VLM_SCHEDULING_STRATEGY=least_loaded
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - vlm-net
+
+  worker-gpu:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.worker_gpu
+    container_name: vlm-worker-gpu-01
+    restart: unless-stopped
+    environment:
+      - VLM_WORKER_ID=prod_gpu_worker_01
+      - VLM_GATEWAY_WS_URL=ws://gateway:8000/workers/connect
+      - VLM_WORKER_AUTH_TOKEN=${VLM_WORKER_AUTH_TOKEN:-vlm_worker_secret_2026}
+      - VLM_MODEL_ID=Qwen/Qwen2-VL-2B-Instruct
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    depends_on:
+      gateway:
+        condition: service_healthy
+    networks:
+      - vlm-net
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: vlm-prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - gateway
+    networks:
+      - vlm-net
+
+networks:
+  vlm-net:
+    driver: bridge

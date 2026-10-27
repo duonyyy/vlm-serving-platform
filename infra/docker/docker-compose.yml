@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  gateway:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.gateway
+    container_name: vlm-gateway
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - VLM_WORKER_AUTH_TOKEN=${VLM_WORKER_AUTH_TOKEN:-vlm_worker_secret_2026}
+      - VLM_CLIENT_API_KEY=${VLM_CLIENT_API_KEY:-}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: vlm-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    depends_on:
+      gateway:
+        condition: service_healthy

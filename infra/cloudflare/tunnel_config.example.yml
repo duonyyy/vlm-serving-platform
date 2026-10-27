@@ -1,0 +1,13 @@
+# Cloudflare Tunnel Configuration Example for VLM Serving Gateway
+tunnel: YOUR_TUNNEL_UUID_HERE
+credentials-file: /root/.cloudflared/YOUR_TUNNEL_UUID_HERE.json
+
+ingress:
+  # Route traffic to the local Gateway instance
+  - hostname: vlm-gateway.yourdomain.com
+    service: http://localhost:8000
+    originRequest:
+      noTLSVerify: false
+      connectTimeout: 30s
+  # Catch-all rule (required by Cloudflare)
+  - service: http_status:404

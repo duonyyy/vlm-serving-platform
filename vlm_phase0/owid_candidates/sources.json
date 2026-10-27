@@ -1,0 +1,38 @@
+[
+  {
+    "name": "life_expectancy",
+    "file": "life_expectancy.png",
+    "source_page": "https://ourworldindata.org/grapher/life-expectancy?country=~OWID_WRL&tab=line&time=1950..2023",
+    "image_url": "https://ourworldindata.org/grapher/life-expectancy.png?country=~OWID_WRL&tab=line&time=1950..2023&imWidth=1200&imDetails=1",
+    "license": "CC BY 4.0 (OWID chart; verify third-party data terms)",
+    "license_page": "https://ourworldindata.org/faqs",
+    "artist": "Our World in Data"
+  },
+  {
+    "name": "diabetes_bar",
+    "file": "diabetes_bar.png",
+    "source_page": "https://ourworldindata.org/grapher/diabetes-prevalence?country=USA~GBR~JPN~VNM&tab=discrete-bar&time=2024",
+    "image_url": "https://ourworldindata.org/grapher/diabetes-prevalence.png?country=USA~GBR~JPN~VNM&tab=discrete-bar&time=2024&imWidth=1200&imDetails=1",
+    "license": "CC BY 4.0 (OWID chart; verify third-party data terms)",
+    "license_page": "https://ourworldindata.org/faqs",
+    "artist": "Our World in Data"
+  },
+  {
+    "name": "population_growth",
+    "file": "population_growth.png",
+    "source_page": "https://ourworldindata.org/grapher/annual-population-growth?country=~OWID_WRL&tab=line&time=1950..2023",
+    "image_url": "https://ourworldindata.org/grapher/annual-population-growth.png?country=~OWID_WRL&tab=line&time=1950..2023&imWidth=1200&imDetails=1",
+    "license": "CC BY 4.0 (OWID chart; verify third-party data terms)",
+    "license_page": "https://ourworldindata.org/faqs",
+    "artist": "Our World in Data"
+  },
+  {
+    "name": "vaccination_bar",
+    "file": "vaccination_bar.png",
+    "source_page": "https://ourworldindata.org/grapher/share-people-vaccinated-covid?country=USA~GBR~JPN~VNM&tab=discrete-bar&time=2024-08-12",
+    "image_url": "https://ourworldindata.org/grapher/share-people-vaccinated-covid.png?country=USA~GBR~JPN~VNM&tab=discrete-bar&time=2024-08-12&imWidth=1200&imDetails=1",
+    "license": "CC BY 4.0 (OWID chart; verify third-party data terms)",
+    "license_page": "https://ourworldindata.org/faqs",
+    "artist": "Our World in Data"
+  }
+]

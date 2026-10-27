@@ -1,0 +1,51 @@
+# Production Dockerfile for VLM GPU Worker (NVIDIA CUDA 12.1 Runtime)
+FROM pytorch/pytorch:2.1.2-cuda12.1-cudnn8-runtime
+
+WORKDIR /app
+
+# Prevent interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+ENV PYTHONUNBUFFERED=1
+
+# Install system libraries needed by OpenCV, PIL, and networking
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    libgl1-mesa-glx \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy package requirements
+COPY pyproject.toml .
+RUN pip install --no-cache-dir .
+
+# Copy application and packages source code
+COPY packages/ ./packages/
+COPY apps/ ./apps/
+
+# Environment configurations
+ENV VLM_WORKER_ID="prod_gpu_worker_01"
+ENV VLM_GATEWAY_WS_URL="ws://gateway:8000/workers/connect"
+ENV VLM_WORKER_AUTH_TOKEN="vlm_worker_secret_2026"
+ENV VLM_MODEL_ID="Qwen/Qwen2-VL-2B-Instruct"
+
+# Check GPU accessibility
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+  CMD nvidia-smi || exit 1
+
+# Default runner: launches remote worker client connecting outbound to Gateway
+CMD ["python", "-c", "\
+import asyncio, os;\
+from packages.model_adapters.qwen_vl import QwenVLAdapter;\
+from packages.worker_runtime.remote_client import RemoteWorkerClient;\
+\
+ws_url = os.getenv('VLM_GATEWAY_WS_URL', 'ws://gateway:8000/workers/connect');\
+token = os.getenv('VLM_WORKER_AUTH_TOKEN', 'vlm_worker_secret_2026');\
+worker_id = os.getenv('VLM_WORKER_ID', 'prod_gpu_worker_01');\
+model_id = os.getenv('VLM_MODEL_ID', 'Qwen/Qwen2-VL-2B-Instruct');\
+\
+adapter = QwenVLAdapter(model_id=model_id);\
+adapter.load();\
+client = RemoteWorkerClient(gateway_ws_url=ws_url, adapter=adapter, auth_token=token, worker_id=worker_id);\
+asyncio.run(client.run())\
+"]

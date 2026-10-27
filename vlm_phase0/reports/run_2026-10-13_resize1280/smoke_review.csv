@@ -1,0 +1,36 @@
+sample_id,category,expected_observation,prediction_text,verdict,reviewer_note
+scene_001,scene,Một cây đứng đơn độc trên sườn đồi cỏ.,"Vật nổi bật trên sườn đồi là một cây lớn, có thể là một cây thông hoặc cây lá rộng, với tán lá xanh đậm và thân cây chắc khỏe. Cây này đứng ở phía trên cùng của sườn đồi, tạo nên một điểm nhấn rõ rệt trong khung cảnh thiên nhiên.",UNREVIEWED,
+scene_002,scene,"Một người đứng trên đỉnh đá cao, phía sau là núi tuyết.","Người trong ảnh đang đứng trên đỉnh một ngọn núi, có thể là một ngọn núi cao, với cảnh quan núi non và băng tuyết phía xa.",UNREVIEWED,
+scene_003,scene,Một cabin cáp treo màu đỏ đi trên dây cáp phía trên khu đồi có nhà.,"Phương tiện màu đỏ trong ảnh là một **cabin xe điện** (cable car) hoặc **xe điện ngầm** (cable car), một loại phương tiện vận chuyển du lịch được sử dụng để di chuyển giữa các điểm trên một dãy núi hoặc khu vực cao. Trong hình, nó đang di chuyển trên một hệ thống dây cáp, với các cabin màu đỏ và một phần của hệ thống dây cáp được nhìn thấy rõ ràng.",UNREVIEWED,
+scene_004,scene,Một đàn chim chân dài đứng trong vùng nước nông.,"Dựa vào hình ảnh, những con chim đang đứng ở một môi trường nước, có thể là một hồ, đầm lầy hoặc vùng nước ngọt. Đây là một môi trường tự nhiên, nơi chim có thể tìm kiếm thức ăn và sinh sống.",UNREVIEWED,
+scene_005,scene,"Mặt trời thấp gần đường chân trời, ánh sáng cam của hoàng hôn.","Bầu trời và ánh sáng trong ảnh gợi thời điểm **sunset** (sunset) – hoàng hôn.  
+
+Dưới đây là các đặc điểm rõ ràng trong ảnh:
+- Mặt trời đang ở phía dưới chân trời, gần đường chân trời, và đang dần lặn xuống.
+- Bầu trời có màu cam, vàng, và nâu rực rỡ, đặc trưng cho thời điểm hoàng hôn.
+- Ánh sáng dịu nhẹ, tạo cảm giác ấm áp và yên bình.
+- Có thể thấy các đường cong của ánh sáng từ mặt trời chiếu qua các đám mây, tạo hiệu ứng",UNREVIEWED,
+document_001,document,Trang giấy cũ có nhiều dòng chữ viết tay mờ.,Trang này là chữ viết tay.,UNREVIEWED,
+document_002,document,Trang in cũ có hai cột chữ dày đặc.,Bố cục phần nội dung chính của trang gồm **2 cột**.,UNREVIEWED,
+document_003,document,Một quốc huy hoặc biểu trưng nhỏ đặt ở giữa phần đầu trang.,"Phía trên trang tài liệu có biểu tượng hình một chiếc cốc hoặc một biểu tượng tròn, có thể là biểu tượng của một tổ chức hoặc cơ quan chính thức.",UNREVIEWED,
+document_004,document,"Bản vẽ kỹ thuật với các đường thẳng và ô/phòng, không phải văn xuôi.","Đây là bản vẽ mặt bằng của một công trình kiến trúc. Trong bản vẽ này, các khối hình chữ nhật và các đường kẻ biểu thị các tầng, cửa sổ, và các chi tiết kiến trúc khác, cho thấy cấu trúc và bố cục của công trình.",UNREVIEWED,
+document_005,document,Một công văn đánh máy với tiêu đề/đầu thư và chữ ký ở phần dưới.,"Có, tài liệu này có phần tiêu đề và chữ ký ở cuối trang.",UNREVIEWED,
+text_001,text,Biển ghi EAT LOCALS.,EAT LOCALS,UNREVIEWED,
+text_002,text,FAIRPLAY; ELEV 9953 FT.,"Dựa vào hình ảnh, biển xanh ghi tên thị trấn là **Fairplay** và độ cao là **9953 feet**.",UNREVIEWED,
+text_003,text,Biển lớn ghi ROY'S; phía dưới có MOTEL và CAFE.,Tên trên biển ngôi sao lớn là ROY'S.,UNREVIEWED,
+text_004,text,Hai từ đầu là БЕЛГОРОД và ТЮМЕНЬ.,БЕЛГОРОД,UNREVIEWED,
+text_005,text,THE EAST WIND WAS WHISTLING OUT OF THE BAY.,"""THE EAST WIND WAS WHISTLING OUT OF THE BAY."" Sun Glacier in the Distance.",UNREVIEWED,
+chart_001,chart,"Đường xanh giảm mạnh gần cuối, xuống khoảng 70%.","Dựa vào biểu đồ, đường màu xanh (tương ứng với `% Seen within Four Hours`) bắt đầu ở mức cao, có xu hướng giảm dần từ khoảng 2012 đến 2017. Tuy nhiên, ở cuối biểu đồ, nó giảm mạnh và đạt đến mức thấp nhất, xuống dưới 70%. Điều này cho thấy sự thay đổi rõ rệt về mức độ người tham dự được nhìn thấy trong 4 giờ tại WWL Trust.",UNREVIEWED,
+chart_002,chart,United States có thanh dài nhất trong bốn quốc gia.,"Dựa trên hình ảnh, quốc gia có thanh dài nhất là **United States** với tỷ lệ 13.7%.",UNREVIEWED,
+chart_003,chart,"Tuổi thọ trung bình toàn cầu tăng dài hạn, dù có vài đoạn giảm ngắn.","Dựa vào hình ảnh biểu đồ, đường biểu diễn từ trái sang phải cho thấy xu hướng tăng dần của tuổi thọ trung bình toàn cầu. Dưới đây là phân tích chi tiết:
+
+- **Từ 1950 đến 1960**: Đường biểu diễn có một đoạn giảm nhẹ, cho thấy tuổi thọ trung bình có thể giảm trong giai đoạn này.
+- **Từ 1960 đến 1970**: Đường biểu diễn tăng lên, cho thấy tuổi thọ trung bình tăng.
+- **Từ 1970 đến 198",UNREVIEWED,
+chart_004,chart,Giá trị cuối chuỗi thấp hơn mức đỉnh trước đó.,"Dựa vào hình ảnh biểu đồ ""Annual change in population"", ta có thể phân tích như sau:
+
+- **Đỉnh của chuỗi**: Đây là điểm cao nhất trong chuỗi, được đánh dấu bằng một đỉnh rõ ràng ở khoảng năm 1990, với giá trị gần 95 triệu người.
+- **Giá trị ở cuối chuỗi (năm 2023)**: Dựa vào biểu đồ, giá trị ở năm 2023 là khoảng 68 triệu người.
+
+Vì vậy, giá trị ở cuối chuỗi (năm 2023) thấp",UNREVIEWED,
+chart_005,chart,"Vietnam là quốc gia có thanh dài nhất, khoảng 90.8%.","Dựa vào biểu đồ, Quốc gia có tỷ lệ cao nhất là **Việt Nam** với tỷ lệ **90.8%** vào ngày **30 tháng 6, 2023**.",UNREVIEWED,

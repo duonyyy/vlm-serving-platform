@@ -1,0 +1,19 @@
+{
+  "status": "MEASURED",
+  "model_id": "Qwen/Qwen3-VL-2B-Instruct",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "manifest_sha256": "f6f7f449e6002f33c55e6152695bccab92467d059a0edf5657679ce1596f68f8",
+  "attempted": 20,
+  "valid_nonempty_outputs": 17,
+  "model_config": {
+    "dtype": "float16",
+    "attention": "eager",
+    "device": "cuda:0",
+    "batch_size": 1,
+    "max_new_tokens": 128,
+    "do_sample": false
+  },
+  "runtime_exit_met": false,
+  "visual_correctness": "UNREVIEWED",
+  "note": "Nonempty output does not prove the answer is grounded in the image. Review smoke_review.csv."
+}

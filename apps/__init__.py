@@ -1,0 +1,1 @@
+"""Applications root package."""

@@ -1,0 +1,13 @@
+# Prometheus Configuration for VLM Serving Platform
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: "vlm-gateway"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["gateway:8000"]
+        labels:
+          environment: "production"
+          service: "vlm-gateway"

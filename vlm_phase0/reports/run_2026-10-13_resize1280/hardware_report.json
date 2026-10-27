@@ -1,0 +1,38 @@
+{
+  "status": "MEASURED",
+  "captured_at_utc": "2026-10-13T08:53:10.161957+00:00",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "packages": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "accelerate": "1.14.0",
+    "Pillow": "12.3.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "gpu": [
+    {
+      "index": 0,
+      "name": "Tesla T4",
+      "compute_capability": [
+        7,
+        5
+      ],
+      "total_vram_bytes": 15636037632
+    },
+    {
+      "index": 1,
+      "name": "Tesla T4",
+      "compute_capability": [
+        7,
+        5
+      ],
+      "total_vram_bytes": 15636037632
+    }
+  ],
+  "kaggle_quota": "USER_RECORDED_SEPARATELY",
+  "nvidia_smi": "Tesla T4, 580.178.04, 15360, 14912, 7.5\nTesla T4, 580.178.04, 15360, 14912, 7.5",
+  "nvidia_smi_error": null,
+  "torch_cuda_runtime": "12.8",
+  "cuda_available": true
+}
